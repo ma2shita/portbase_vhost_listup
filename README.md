@@ -20,9 +20,9 @@ Environments
 	Listen 4001
 	<VirtualHost *:4001>
 	  RackEnv development
-	  DocumentRoot /home/obdo/app/scaffoh1/public
+	  DocumentRoot /home/user1/app/scaffoh1/public
 
-	  <Directory "/home/obdo/app/scaffoh1/public">
+	  <Directory "/home/user1/app/scaffoh1/public">
 		Options -MultiViews
 		Order allow,deny
 		Allow from all
