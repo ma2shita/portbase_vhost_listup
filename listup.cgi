@@ -3,7 +3,7 @@
 sites = Dir.glob('/etc/apache2/sites-available/*').map{|i|[File.basename(i), (open(i).read.match(/^Listen ([0-9]+)$/)[1] rescue nil)]}.reject{|i|i.last.nil?}
 list = sites.map do |i|
   url = sprintf('http://%s:%s', `hostname -f`.strip, i.last)
-  sprintf('<li><a href="%s">%s</a></li>', url, i.first)
+  sprintf('<li>%s <a href="%s">%s</a></li>', url, url, i.first)
 end
 
 require 'cgi'
